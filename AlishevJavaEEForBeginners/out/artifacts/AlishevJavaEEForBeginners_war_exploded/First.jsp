@@ -13,15 +13,22 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
-
-        <%@page import="java.util.Date, Lesson5.Logic.TestClass" %>
         <%
-            TestClass testClass = new TestClass();
+            String name = request.getParameter("name");
         %>
 
         <%=
-            testClass.getInfo()
+            "Hello, " + name
         %>
+
+<%--        <%@page import="java.util.Date, Lesson5.Logic.TestClass" %>--%>
+<%--        <%--%>
+<%--            TestClass testClass = new TestClass();--%>
+<%--        %>--%>
+
+<%--        <%=--%>
+<%--            testClass.getInfo()--%>
+<%--        %>--%>
 
 <%--        <%=--%>
 <%--            new Date()--%>
