@@ -1,5 +1,6 @@
 package Lesson3;
 
+import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -17,5 +18,12 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         pw.println("<html>");
         pw.println("<h1> Hello, " + name + " " + surname + " </h1>");
         pw.println("</html>");
+
+//        response.sendRedirect("https://www.google.com");
+
+//        response.sendRedirect("/testJsp.jsp");
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/testJsp.jsp");
+        dispatcher.forward(request, response);
     }
 }
